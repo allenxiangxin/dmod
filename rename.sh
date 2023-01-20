@@ -1,8 +1,8 @@
 #!/bin/bash
 
-lower='slartibartfast'
-upper='SLARTIBARTFAST'
-mixed='Slartibartfast'
+lower='dmod'
+upper='DMOD'
+mixed='Dmod'
 
 if [ ! -z $1 ]
 then

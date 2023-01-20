@@ -2,6 +2,6 @@ bin/*
 *.root
 *.log
 *.o
-slartibartfast.sh
+dmod.sh
 install/*
 build/*

@@ -1,15 +1,15 @@
-add_library( slartibartfastobj OBJECT
+add_library( dmodobj OBJECT
   # Append each .cc file
 )
 
-target_include_directories( slartibartfastobj PUBLIC
-  $<BUILD_INTERFACE:${SLARTIBARTFAST_INCLUDE_DIR}>
+target_include_directories( dmodobj PUBLIC
+  $<BUILD_INTERFACE:${DMOD_INCLUDE_DIR}>
   $<INSTALL_INTERFACE:include>)
 
-file(COPY include/ DESTINATION ${SLARTIBARTFAST_INCLUDE_DIR})
+file(COPY include/ DESTINATION ${DMOD_INCLUDE_DIR})
 
-add_executable(slartibartfast slartibartfast.cpp)
-target_link_libraries(slartibartfast PUBLIC 
-  slartibartfastobj ${ROOT_LIBRARIES} ${Geant4_LIBRARIES} ${Ratpac_LIBRARIES})
+add_executable(dmod dmod.cpp)
+target_link_libraries(dmod PUBLIC 
+  dmodobj ${ROOT_LIBRARIES} ${Geant4_LIBRARIES} ${Ratpac_LIBRARIES})
 
-install(TARGETS slartibartfast RUNTIME DESTINATION bin)
+install(TARGETS dmod RUNTIME DESTINATION bin)

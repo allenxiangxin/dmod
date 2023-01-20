@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11...3.14)
-project(slartibartfast VERSION 1.0.0
-  DESCRIPTION "Slartibartfast Simulations"
+project(dmod VERSION 1.0.0
+  DESCRIPTION "Dmod Simulations"
   LANGUAGES C CXX)
 
 ###########################################################
@@ -46,11 +46,11 @@ endif()
 
 ###########################################################
 # Options
-set(SLARTIBARTFAST_BINARY_DIR ${PROJECT_BINARY_DIR}/bin CACHE PATH "Where to output executables")
-set(SLARTIBARTFAST_LIBRARY_DIR ${PROJECT_BINARY_DIR}/lib CACHE PATH "Where to output library files")
-set(SLARTIBARTFAST_INCLUDE_DIR ${PROJECT_BINARY_DIR}/include CACHE PATH "Where to collect headers")
-set(SLARTIBARTFAST_CMAKE_DIR ${PROJECT_BINARY_DIR}/cmake CACHE PATH "Where to cmake configuration")
-option(SLARTIBARTFAST_RAT "build rat executable" ON)
+set(DMOD_BINARY_DIR ${PROJECT_BINARY_DIR}/bin CACHE PATH "Where to output executables")
+set(DMOD_LIBRARY_DIR ${PROJECT_BINARY_DIR}/lib CACHE PATH "Where to output library files")
+set(DMOD_INCLUDE_DIR ${PROJECT_BINARY_DIR}/include CACHE PATH "Where to collect headers")
+set(DMOD_CMAKE_DIR ${PROJECT_BINARY_DIR}/cmake CACHE PATH "Where to cmake configuration")
+option(DMOD_RAT "build rat executable" ON)
 
 ###########################################################
 # Set up third party libraries
@@ -71,10 +71,10 @@ find_package(Ratpac REQUIRED)
 # Configure header with our version information
 
 # Configure local scripts
-set(SLARTIBARTFASTROOT ${CMAKE_INSTALL_PREFIX})
-set(SLARTIBARTFASTSHARE ${PROJECT_SOURCE_DIR})
-configure_file(${CMAKE_SOURCE_DIR}/config/slartibartfast.sh.in
-  ${PROJECT_SOURCE_DIR}/slartibartfast.sh
+set(DMODROOT ${CMAKE_INSTALL_PREFIX})
+set(DMODSHARE ${PROJECT_SOURCE_DIR})
+configure_file(${CMAKE_SOURCE_DIR}/config/dmod.sh.in
+  ${PROJECT_SOURCE_DIR}/dmod.sh
   @ONLY NEWLINE_STYLE UNIX)
 
 ###########################################################
@@ -85,26 +85,26 @@ add_subdirectory(src)
 # Installation
 
 # Configure global scripts
-set(SLARTIBARTFASTSHARE ${CMAKE_INSTALL_PREFIX}/share/slartibartfast)
-configure_file(${CMAKE_SOURCE_DIR}/config/slartibartfast.sh.in
-  ${SLARTIBARTFAST_BINARY_DIR}/slartibartfast.sh
+set(DMODSHARE ${CMAKE_INSTALL_PREFIX}/share/dmod)
+configure_file(${CMAKE_SOURCE_DIR}/config/dmod.sh.in
+  ${DMOD_BINARY_DIR}/dmod.sh
   @ONLY NEWLINE_STYLE UNIX)
 
 # Install the data files
-install(DIRECTORY ratdb/ DESTINATION ${SLARTIBARTFASTSHARE}/ratdb
+install(DIRECTORY ratdb/ DESTINATION ${DMODSHARE}/ratdb
   PATTERN "ratdb/*")
 
-install(DIRECTORY models/ DESTINATION ${SLARTIBARTFASTSHARE}/models
+install(DIRECTORY models/ DESTINATION ${DMODSHARE}/models
   PATTERN "models/*")
 
 # Install the python files
-install(DIRECTORY utilities/ DESTINATION ${SLARTIBARTFASTSHARE}/utilities
+install(DIRECTORY utilities/ DESTINATION ${DMODSHARE}/utilities
   PATTERN "utilities/*")
 
 # Install the mac files
-install(DIRECTORY macros/ DESTINATION ${SLARTIBARTFASTSHARE}/macros
+install(DIRECTORY macros/ DESTINATION ${DMODSHARE}/macros
   PATTERN "macros/*")
 
 # Install env files
-install(FILES ${SLARTIBARTFAST_BINARY_DIR}/slartibartfast.sh
+install(FILES ${DMOD_BINARY_DIR}/dmod.sh
   DESTINATION bin)
