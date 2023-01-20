@@ -1,5 +1,5 @@
 add_library( dmodobj OBJECT
-  # Append each .cc file
+  GeoDMODFactory.cc  
 )
 
 target_include_directories( dmodobj PUBLIC

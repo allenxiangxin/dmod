@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <RAT/AnyParse.hh>
+#include <GeoDMODFactory.hh>
 #include <RAT/Rat.hh>
 #include <RAT/DetectorFactory.hh>
 #include <iostream>

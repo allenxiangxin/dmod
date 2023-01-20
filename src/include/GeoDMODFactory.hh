@@ -6,7 +6,7 @@
 namespace DMOD {
  class GeoDMODFactory : public RAT::GeoSolidFactory {
  public:
-   GeoDMODFactory() : GeoSolidFactory("bnl1t") {};
+   GeoDMODFactory() : GeoSolidFactory("dmod") {};
    virtual G4VSolid *ConstructSolid(RAT::DBLinkPtr table);
  };
 
