@@ -5,3 +5,5 @@ bin/*
 dmod.sh
 install/*
 build/*
+src/*~
+src/include/*~
