@@ -7,7 +7,7 @@ mother:"",
 type :"box",
 size: [2000.0, 2000.0, 1500.0],
 position:[0.0,0.0,0.0],
-material:"air",
+material:"cryostat_vacuum",
 invisble:1,
 }
 
