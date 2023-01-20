@@ -1,1 +1,2 @@
-# Ratpac 2 Example Simulation
+# Dark Matter Outer Detector (DMOD)
+
