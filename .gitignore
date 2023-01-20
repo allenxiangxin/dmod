@@ -2,9 +2,12 @@ bin/*
 *.root
 *.log
 *.o
+*~
 dmod.sh
 install/*
 build/*
+output/*
+analysis/*~
 macros/*~
 src/*~
 src/include/*~
