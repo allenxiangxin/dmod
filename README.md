@@ -1,3 +1,3 @@
 # Dark Matter Outer Detector (DMOD)
 
-This repository is forked from https://github.com/MorganAskins/RatpacExperiment
+A simulation study of the outer detector design for the next-gen dark matter experiment. This code uses `ratpac-two`.
