@@ -7,22 +7,24 @@
 
 /run/initialize
 /tracking/storeTrajectory 1
+/rat/physics/enableCerenkov 1
 
 # BEGIN EVENT LOOP
 /rat/proc simpledaq
 /rat/proc count
-/rat/procset update 10
+/rat/procset update 2
 /rat/proc outroot
-/rat/procset file "muon_1GeV_water_1cm.root"
+#/rat/proclast outntuple
+/rat/procset file "output/root/muon_200MeV_water_1282cm.root"
+#/rat/procset file "output/ntuple/muon_1GeV_water_1cm.root"
 
-/rat/proclast outroot
+
 #END EVENT LOOP
 
 ##### GENERATORS #################
 /generator/add combo gun:point:poisson
-/generator/vtx/set mu- 0.0 0.0 -1.0 1000
-/generator/pos/set 0.0 0.0 1000.0
+/generator/vtx/set mu- 0.0 0.0 -1.0 200
+/generator/pos/set 0.0 0.0 100.0
 
 ##### RUN ###########
-/run/beamOn 1000
-
+/run/beamOn 2

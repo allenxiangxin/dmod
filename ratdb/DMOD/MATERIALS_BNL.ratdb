@@ -1,0 +1,112 @@
+//// Photocathode materials for PMTs in WbLS at BNL
+{
+name: "MATERIAL",
+index: "photocathode_et9954b",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 5.0,
+nelements: 1,
+nmaterials: 0,
+elements: ["Potassium"],
+elemprop: [1.0],
+}
+
+
+{
+name: "MATERIAL",
+index: "photocathode_r2083",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 5.0,
+nelements: 1,
+nmaterials: 0,
+elements: ["Potassium"],
+elemprop: [1.0],
+}
+
+
+{
+name: "MATERIAL",
+index: "photocathode_et9821b",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 5.0,
+nelements: 1,
+nmaterials: 0,
+elements: ["Potassium"],
+elemprop: [1.0],
+}
+
+{
+name: "MATERIAL",
+index: "acrylic_uvt_nakano",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 1.14,
+nelements: 3,
+nmaterials: 0,
+elements: ["Hydrogen", "Carbon", "Oxygen"],
+elemprop: [0.0703, 0.558, 0.3717],
+}
+
+{
+name: "MATERIAL",
+index: "acrylic_uvt_nakano_noreflnorm",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 1.14,
+nelements: 3,
+nmaterials: 0,
+elements: ["Hydrogen", "Carbon", "Oxygen"],
+elemprop: [0.0703, 0.558, 0.3717],
+}
+
+{
+name: "MATERIAL",
+index: "silicone_cookie",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 0.98, //RTV6136-D1 datasheet
+nelements: 3,
+nmaterials: 0,
+//This is the acrylic elemental composition and should be updated
+elements: ["Hydrogen", "Carbon", "Oxygen"],
+elemprop: [0.0703, 0.558, 0.3717],
+}
+
+{
+name: "MATERIAL",
+index: "silicone_cookie_noreflnorm",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 0.98, //RTV6136-D1 datasheet
+nelements: 3,
+nmaterials: 0,
+//This is the acrylic elemental composition and should be updated
+elements: ["Hydrogen", "Carbon", "Oxygen"],
+elemprop: [0.0703, 0.558, 0.3717],
+}
+
+{
+name: "MATERIAL",
+index: "water_bnl",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 1.0,
+nelements: 2,
+nmaterials: 0,
+elements: ["Hydrogen", "Oxygen",],
+elemprop: [0.1119, 0.8881],
+}
+
+{
+name: "MATERIAL",
+index: "water_bnl_shortabs",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+density: 1.0,
+nelements: 2,
+nmaterials: 0,
+elements: ["Hydrogen", "Oxygen",],
+elemprop: [0.1119, 0.8881],
+}
